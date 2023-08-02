@@ -7,15 +7,17 @@ import Cart from './pages/Cart';
 import About from './pages/About';
 import SingleItemPage from './pages/SingleItemPage';
 import {CartContext} from './CartContext';
+import BasicExample from './components/NewNavbar';
 
 function App() {
   return (
     <>
-
+<div className="body"></div>
     <CartContext.Provider value={{name : "Aditya Goel"}} >
 
 
-        <Navbar />
+        {/* <Navbar /> */}
+        <BasicExample/>
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path="/products" element={<Products />} />

@@ -4,11 +4,11 @@ import ProductList from '../components/ProductList'
 const Home = () => {
   return (
     <>
-      <div className='hero py-16 '>
+      {/* <div id='main' className='hero py-16 '> */}
 
-        <div className='container mx-auto flex items-center justify-between '>
+        <div id="main" className='flex items-center justify-between flex-wrap'>
 
-          <div className='w-1/2 border border-red-200 flex items-center justify-center flex-col  '>
+          <div className=' border border-red-200 flex items-center justify-center flex-col  '>
             <h3 className=''>
 
               Are you Hungry ?
@@ -21,15 +21,15 @@ const Home = () => {
             <button>Order Now :- </button>
 
           </div>
-          <div className='w-1/2 flex items-center justify-center  border border-red-200'>
+          {/* <div className='w-1/4 items-center justify-center  border border-red-200'>
             <img src="./images/logo.jpg" alt="" />
-          </div>
+          </div> */}
 
         </div>
 
-      </div>
+      {/* </div> */}
 
-      <h1>Prdoucts List</h1>
+      <h2 className='flex justify-center items-center'>Products List</h2>
       <ProductList/>
     </>
   )

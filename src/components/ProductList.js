@@ -14,8 +14,7 @@ const ProductList = () => {
     let {name} = useContext(CartContext)
     return (
         <>
-            <h1>{name}</h1>
-            <div className="flex gap-3">
+            <div className="flex items-center justify-center gap-5 flex-wrap">
                 {
                     list.map((x) => {
                         let {
@@ -26,6 +25,9 @@ const ProductList = () => {
                 }
 
             </div>
+
+
+            
         </>
     )
 }

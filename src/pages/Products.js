@@ -4,8 +4,9 @@ import ProductList from '../components/ProductList'
 const Products = () => {
   return (
     <>
-      <div>Products</div>
+      <h1 className='flex justify-center items-center'>Products</h1>
       <ProductList />
+
     </>
   )
 }
