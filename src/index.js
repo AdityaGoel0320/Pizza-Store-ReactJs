@@ -6,6 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+// Alternatively, you can import individual styles if you need to reduce bundle size:
+// import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+// import '@fortawesome/fontawesome-free/css/solid.min.css';
+// import '@fortawesome/fontawesome-free/css/regular.min.css';
+// import '@fortawesome/fontawesome-free/css/brands.min.css';
 
 
 

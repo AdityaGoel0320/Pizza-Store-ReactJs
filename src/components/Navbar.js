@@ -1,43 +1,56 @@
-import React from 'react'
-
-
+import React, { useState } from "react";
+import "../navbar.css";
 import { NavLink } from 'react-router-dom';
 
+function Navbar() {
+    const [active, setActive] = useState("nav__menu");
+    const [icon, setIcon] = useState("nav__toggler");
+    const navToggle = () => {
+        if (active === "nav__menu") {
+            setActive("nav__menu nav__active");
+        } else setActive("nav__menu");
 
-const Navbar = () => {
+        // Icon Toggler
+        if (icon === "nav__toggler") {
+            setIcon("nav__toggler toggle");
+        } else setIcon("nav__toggler");
+    };
     return (
-        <>
+        <nav className="nav">
+            <NavLink className=" nav__brand navbar-brand flex items-center justify-center" to="/">
+                <img src="../images/logo.jpg" className='h-12' alt="" />
+
+            </NavLink>
+            <ul className={active}>
+                <li className="nav__item">
+                    <NavLink className="nav-link " to="/">Home</NavLink>
+
+                </li>
+                <li className="nav__item">
+                    <NavLink className="nav-link" to="/products">Products</NavLink>
+                </li>
+                <li className="nav__item">
+                    <NavLink className="nav-link" to="/about">About</NavLink>
 
 
+                </li>
+                <li className="nav__item">
+                    <NavLink className="nav-link" to="/cart">Cart</NavLink>
 
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <NavLink className="navbar-brand" to="#">
-                    <img src="../images/logo.jpg" className='h-12' alt="" />
-
-                </NavLink>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav  ms-auto">
-                        <li className="nav-item active">
-                            <NavLink className="nav-link " to="/">Home</NavLink>
-                        </li>
-
-
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/products">Products</NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/about">About</NavLink>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </>
-    )
+                </li>
+                {/* <li className="nav__item">
+          <a href="#" className="nav__link">
+            Contact
+          </a>
+        </li> */}
+            </ul>
+            <div onClick={navToggle} className={icon}>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+            </div>
+        </nav>
+    );
 }
 
-export default Navbar
+export default Navbar;

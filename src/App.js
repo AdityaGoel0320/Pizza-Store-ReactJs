@@ -2,22 +2,20 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Products from './pages/Products';
 import Home from './pages/Main';
-import Navbar from './components/Navbar';
 import Cart from './pages/Cart';
 import About from './pages/About';
 import SingleItemPage from './pages/SingleItemPage';
-import {CartContext} from './CartContext';
-import BasicExample from './components/NewNavbar';
+import { CartContext } from './CartContext';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
-<div className="body"></div>
-    <CartContext.Provider value={{name : "Aditya Goel"}} >
+      <div className="body"></div>
+      <CartContext.Provider value={{ name: "Aditya Goel" }} >
 
 
-        {/* <Navbar /> */}
-        <BasicExample/>
+        <Navbar />
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path="/products" element={<Products />} />
@@ -26,7 +24,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
 
         </Routes>
-    </CartContext.Provider>
+      </CartContext.Provider>
 
     </>
 

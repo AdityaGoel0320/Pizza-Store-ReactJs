@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: black;
 }
 
 html {
@@ -13,31 +14,39 @@ h1 {
     font-size: 6rem;
     font-weight: 900;
 
+    color: black;
+
+
 }
 
 h2 {
     font-size: 3.5rem;
+    color: black;
+
 }
 
 h3 {
     font-size: 2.5rem;
     font-weight: 700;
+    color: black;
+
 }
 
-h4{
+h4 {
     font-size: 2rem;
+
 }
 
-#main{
+#main {
     height: 100%;
     width: 100%;
-    display: flex ; 
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding:8.5rem;
+    padding: 8.5rem;
 }
 
-button{
+button {
     background-color: chartreuse;
     font-weight: bold;
     padding: 1rem;
@@ -46,16 +55,17 @@ button{
     border-radius: 2rem;
 }
 
-button:hover{
+button:hover {
     background-color: black;
     color: white;
     font-weight: bolder;
     padding: 1rem;
     border: 1px solid black;
     border-radius: 2rem;
-    font-size: larger ; 
+    font-size: larger;
 }
-.size{
+
+.size {
     background-color: black;
     border: 2px solid black;
     color: white;
@@ -63,7 +73,7 @@ button:hover{
     padding: 1rem;
 }
 
-.btn{
+.btn {
     background-color: yellow;
     font-weight: bold;
     padding: 1rem;
@@ -71,7 +81,7 @@ button:hover{
     border-radius: 2rem;
 }
 
-#item{
+#item {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -79,13 +89,87 @@ button:hover{
 }
 
 
-#img{
+#img {
     border: 2px solid black;
     height: 20rem;
     width: 20rem;
     border-radius: 100%;
 }
 
+/* Apply font families to different elements */
+
+/* Headings (H1, H2, H3, etc.) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/* Subtopics and Body Text */
+p,
+span,
+li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+/* Buttons */
+button,
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    /* You can adjust the weight according to your preference */
+}
+
+
+
+
+
+
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 
 
