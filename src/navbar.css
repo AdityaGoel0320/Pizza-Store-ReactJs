@@ -25,7 +25,9 @@ a {
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 1rem;
+    color: white;
     height: 8vh;
     background: black;
 
@@ -67,6 +69,7 @@ a {
         height: 93vh;
         width: 50vw;
         background: black;
+        color: white;
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.5s ease-in;

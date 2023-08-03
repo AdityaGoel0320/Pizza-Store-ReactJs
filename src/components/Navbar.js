@@ -16,14 +16,14 @@ function Navbar() {
         } else setIcon("nav__toggler");
     };
     return (
-        <nav className="nav">
+        <nav className="nav" style={{ color: "white" }}>
             <NavLink className=" nav__brand navbar-brand flex items-center justify-center" to="/">
                 <img src="../images/logo.jpg" className='h-12' alt="" />
 
             </NavLink>
             <ul className={active}>
                 <li className="nav__item">
-                    <NavLink className="nav-link " to="/">Home</NavLink>
+                    <NavLink className="nav-link" to="/">Home</NavLink>
 
                 </li>
                 <li className="nav__item">

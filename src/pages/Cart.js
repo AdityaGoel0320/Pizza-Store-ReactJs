@@ -5,7 +5,7 @@ const Cart = () => {
     <>
       <h1>
 
-        <div className='cart'>OOPs! No item added in your cart </div>
+        <div className='cart flex items-center justify-center flex-col gap-12 m-48'>OOPs! No item added in your cart </div>
       </h1>
     </>
   )

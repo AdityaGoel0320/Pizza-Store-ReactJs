@@ -1,14 +1,15 @@
 import React from 'react'
 import ProductList from '../components/ProductList'
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
   return (
     <>
-      {/* <div id='main' className='hero py-16 '> */}
+      <div id='main' className='hero py-16 '>
 
-        <div id="main" className='flex items-center justify-between flex-wrap'>
+        <div id="main" className=''>
 
-          <div className=' border border-red-200 flex items-center justify-center flex-col  '>
+          <div className=''>
             <h3 className=''>
 
               Are you Hungry ?
@@ -17,20 +18,22 @@ const Home = () => {
 
               Dont wait to Order.
             </h1>
-
+<NavLink to="/products">
+  
             <button>Order Now :- </button>
+</NavLink>
 
           </div>
-          {/* <div className='w-1/4 items-center justify-center  border border-red-200'>
-            <img src="./images/logo.jpg" alt="" />
-          </div> */}
+          <div className=''>
+            <img src="./images/img.jpg" alt="" />
+          </div>
 
         </div>
 
-      {/* </div> */}
+      </div>
 
       <h2 className='flex justify-center items-center'>Products List</h2>
-      <ProductList/>
+      <ProductList />
     </>
   )
 }
