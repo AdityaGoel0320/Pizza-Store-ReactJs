@@ -55,7 +55,7 @@ const SingleItemPage = () => {
 
 
 
-            <div id='item_single' className='flex  gap-5 m-5 items-center justify-center  '>
+            <div className='flex  gap-5 m-5 items-center justify-center  flex-col '>
                 <img id='img' src={arr[x].image} alt="rffgfh" />
 
                 <h3>{arr[x].name}</h3>
