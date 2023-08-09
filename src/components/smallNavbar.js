@@ -12,7 +12,7 @@ const CategoryArray = (props) => {
 
     return (
         <>
-           <div className='flex items-center justify-center m-12 gap-5'>
+           <div className='btn_small flex items-center justify-center m-12 gap-3'>
            {uniqueSizeArray.map((x) => {
                 return <button onClick={() => filterSize(x)}>{x}</button>
             })}

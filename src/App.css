@@ -104,7 +104,9 @@ button:hover {
     font-weight: bolder;
     color: white;
 }
-
+.btn_small{
+    font-size: 0.7rem;
+}
 #item {
     display: flex;
     flex-direction: column;
