@@ -7,16 +7,16 @@ import arr from './arr'
 import {CartContext} from '../CartContext'
 
 
-const ProductList = () => {
+const Productarr = (props) => {
+    let {arr} = props ; 
 
-    const [list, setlist] = useState(arr)
 
     let {name} = useContext(CartContext)
     return (
         <>
             <div className="flex items-center justify-center gap-5 flex-wrap">
                 {
-                    list.map((x) => {
+                    arr.map((x) => {
                         let {
                             _id, name, image, size, price
                         } = x;
@@ -32,4 +32,4 @@ const ProductList = () => {
     )
 }
 
-export default ProductList
+export default Productarr

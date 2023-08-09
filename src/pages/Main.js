@@ -1,8 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductList from '../components/ProductList'
 import { NavLink } from 'react-router-dom';
+import CategoryArray from '../components/smallNavbar';
+import arr from '../components/arr';
 
 const Home = () => {
+
+  const [newarr, setnewarr] = useState(arr)
+
+  let uniqueSize = [
+    ... new Set(
+      arr.map((x) => {
+        return x.size
+      })
+    ), "All"
+  ]
+  console.log(uniqueSize)
+
+  let filterSize = (parameter) => {
+
+    if (parameter === "All") {
+      setnewarr(arr);
+    }
+    else {
+      let x = arr.filter((x) => {
+        return x.size === parameter;
+      })
+      console.log("erfgrg" + x)
+      setnewarr(x);
+      console.log(arr)
+    }
+
+  }
   return (
     <>
       <div id='main' className='hero py-16 '>
@@ -18,10 +47,10 @@ const Home = () => {
 
               Dont wait to Order.
             </h1>
-<NavLink to="/products">
-  
-            <button>Order Now :- </button>
-</NavLink>
+            <NavLink to="/products">
+
+              <button>Order Now :- </button>
+            </NavLink>
 
           </div>
           <div className=''>
@@ -33,7 +62,11 @@ const Home = () => {
       </div>
 
       <h2 className='flex justify-center items-center'>Products List</h2>
-      <ProductList />
+
+
+      <CategoryArray uniqueSize={uniqueSize} filterSize={filterSize} />
+
+      <ProductList arr={newarr} />
     </>
   )
 }

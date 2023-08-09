@@ -22,7 +22,6 @@ function App() {
           <Route exact path="/products/:_id" element={<SingleItemPage />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/about" element={<About />} />
-
         </Routes>
       </CartContext.Provider>
 
